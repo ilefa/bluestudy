@@ -1,0 +1,11 @@
+# Directories
+test/
+.vscode/
+node_modules/
+
+# Files
+test.ts
+names.ts
+*.test.ts
+*.tgz
+README.md
