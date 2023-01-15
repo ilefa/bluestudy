@@ -1,18 +1,18 @@
-# Bluesign
+# Bluestudy
 
 ![version badge](https://img.shields.io/badge/version-1.0.0-blue)
 
-Bluesign is a TypeScript library that allows you to easily fetch the schedule for any UConn room.
+Bluestudy is a TypeScript library that allows you to easily fetch the schedule for UConn Library study rooms.
 
 ## Installation
 
-Use npm to install Bluesign.
+Use npm to install Bluestudy.
 
 ```bash
-npm install @ilefa/bluesign
+npm install @ilefa/bluestudy
 ```
 
-Since Blueplate is currently hosted on GitHub packages, you will need to make a ``.npmrc`` file in the root of your project, and insert the following:
+Since Bluestudy is currently hosted on GitHub packages, you will need to make a ``.npmrc`` file in the root of your project, and insert the following:
 
 ```env
 @ilefa:registry=https://npm.pkg.github.com
@@ -21,35 +21,72 @@ Since Blueplate is currently hosted on GitHub packages, you will need to make a 
 ## Usage
 
 ```ts
-import { getRoomSchedule, isRoomTracked } from '@ilefa/bluesign';
+import { Floor, getAvailability, resolveRoomById } from '@ilefa/bluestudy';
 
-// Fetch everything happening at McHugh Room 201
-let meals = await getRoomSchedule("MCHU_201");
+// Fetch availability for all rooms on January 15th
+let meals = await getAvailability([1, 15]);
 
 {
-    "title": "MCHU 201"
-    "date": "11/17/2021"
-    "entries": [
-        {
-            "start": "8:00 AM",
-            "end": "8:50 AM",
-            "eyent": "CE 3640",
-            "section": "005",
-            "independent": false
-        },
-        {
-            "start": "9:05 AM",
-            "end": "9:55 AM",
-            "event". "SOCI 3307",
-            "section": "001",
-            "independent": false
-        }
-        ...
-    ]
+  '1128': [
+    {
+      start: '2023-01-15 12:00:00',
+      end: '2023-01-15 15:00:00',
+      itemId: 12453,
+      checksum: 'c11d5428d3ee31aa9d99de346e3ddf1c',
+      state: 'available'
+    },
+    {
+      start: '2023-01-15 15:00:00',
+      end: '2023-01-15 17:00:00',
+      itemId: 12453,
+      checksum: '9bc32cf0c6662f6606e4249c41030929',
+      state: 'unavailable'
+    }
+  ],
+  ...
 }
 
-// Check if a room is tracked (has a schedule)
-let tracked = isRoomTracked("MCHU_201");
+// Fetch availability of a specific room on January 15th
+let b149b = await getAvailability([1, 15], '12444');
+
+{
+  "B149B": [
+    {
+      "start": "2023-01-15 12:00:00",
+      "end": "2023-01-15 15:00:00",
+      "itemId": 12453,
+      "checksum": "c11d5428d3ee31aa9d99de346e3ddf1c",
+      "state": "available"
+    },
+    {
+      "start": "2023-01-15 15:00:00",
+      "end": "2023-01-15 17:00:00",
+      "itemId": 12453,
+      "checksum": "9bc32cf0c6662f6606e4249c41030929",
+      "state": "unavailable"
+    }
+  ]
+}
+
+// Get a room by it's ID
+const b149b = resolveRoomById('12444');
+
+{
+    "name": "B149B",
+    "id": "12444",
+    "floor": Floor.B,
+    "capacity": 6,
+    "features": []
+}
+
+// Comparator to sort rooms by floor
+const arr = [room2100, room1104];
+const sorted = arr.sort(floorSorter);
+
+[
+    room1104,
+    room2100
+]
 ```
 
 ## Contributing

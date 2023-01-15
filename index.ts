@@ -320,10 +320,13 @@ export const resolveRoomById = (id: string) => Rooms.find(({ id: roomId }) => ro
  * 
  * @param date [optional] the target date to receive availability data for
  */
-export const getAvailability = async (date?: MonthDayPair) => {
+export const getAvailability = async (date?: MonthDayPair, roomId?: string) => {
+    if (!Rooms.find(({ id }) => id === roomId))
+        return null;    
+
     let { start, end } = getDateBoundary(date);
     let payload = {
-        lid: 820, gid: 1425, eid: -1,
+        lid: 820, gid: 1425, eid: roomId ?? -1,
         seat: 0, seatId: 0, zone: 0,
         accessible: 0, powered: 0,
         pageIndex: 0, pageSize: 18,
@@ -341,7 +344,7 @@ export const getAvailability = async (date?: MonthDayPair) => {
         .post('https://uconncalendar.lib.uconn.edu/spaces/availability/grid', qs.stringify(payload), opts)
         .then(res => res.data)
         .then(data => data.slots)
-        .catch(_ => []);
+        .catch(_ => null);
 
     let grid: Record<string, AvailabilityRecord[]> = res.reduce((prev, cur) => {
         let room = resolveRoomById(cur.itemId.toString());
@@ -360,6 +363,14 @@ export const getAvailability = async (date?: MonthDayPair) => {
         prev[room.name].push(patched);
         return prev;
     }, {});
+
+    if (roomId) {
+        let room = resolveRoomById(roomId);
+        return Object
+            .keys(grid)
+            .filter(key => key === room.name)
+            .map(key => ({ [key]: grid[key] }));
+    }
 
     return grid;
 }
