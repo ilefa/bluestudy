@@ -1,3 +1,4 @@
+import qs from 'qs';
 import axios from 'axios';
 
 export type MonthDayPair = [number, number];
@@ -14,12 +15,16 @@ export type Room = {
     readonly features: string[];
 }
 
-export type AvailabilityRecord = {
+export type AvailabilityResponse = {
     start: number;
     end: number;
     itemId: number;
     checksum: string;
-    className?: string;
+    className: string;
+}
+
+export type AvailabilityRecord = Omit<AvailabilityResponse, 'className'> & {
+    state: 'available' | 'unavailable';
 }
 
 export const Rooms: Room[] = [
@@ -276,9 +281,30 @@ const getOrDefault = (input?: MonthDayPair, def = new Date()) => {
     let date = new Date();
     date.setMonth(input[0]);
     date.setDate(input[1]);
+    date.setHours(0, 0, 0, 0);
 
     return date;
 }
+
+const prependZero = (input: number) => {
+    if (input < 10)
+        return `0${input}`;
+    return input;
+}
+
+const getDateBoundary = (during: MonthDayPair) => {
+    let start = getOrDefault(during);
+    let end = new Date(start);
+    
+    end.setDate(start.getDate() + 1);
+
+    return {
+        start: getDateString(start),
+        end: getDateString(end)
+    }
+}
+
+const getDateString = (input: Date) => `${input.getFullYear()}-${prependZero(input.getMonth())}-${prependZero(input.getDate())}`;
 
 export const floorSorter = (a: Room, b: Room) => {
     if (a.floor === b.floor)
@@ -295,37 +321,43 @@ export const resolveRoomById = (id: string) => Rooms.find(({ id: roomId }) => ro
  * @param date [optional] the target date to receive availability data for
  */
 export const getAvailability = async (date?: MonthDayPair) => {
-    let targetDate = getOrDefault(date);
+    let { start, end } = getDateBoundary(date);
     let payload = {
-        lid: 820,
-        gid: 1425,
-        eid: -1,
-        seat: 0,
-        seatId: 0,
-        zone: 0,
-        accessible: 0,
-        powered: 0,
-        start: targetDate.toDateString(),
-        end: targetDate.toDateString(),
-        pageIndex: 0,
-        pageSize: 18
+        lid: 820, gid: 1425, eid: -1,
+        seat: 0, seatId: 0, zone: 0,
+        accessible: 0, powered: 0,
+        pageIndex: 0, pageSize: 18,
+        start, end
     };
 
-    let res: AvailabilityRecord[] = await axios
-        .post('https://uconncalendar.lib.uconn.edu/spaces/availability/grid', payload)
+    let opts = {
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            'Referer': 'https://uconncalendar.lib.uconn.edu/reserve/GroupStudyRooms',
+        }
+    };
+
+    let res: AvailabilityResponse[] = await axios
+        .post('https://uconncalendar.lib.uconn.edu/spaces/availability/grid', qs.stringify(payload), opts)
         .then(res => res.data)
         .then(data => data.slots)
-        .catch(_ => null);
-
-    if (!res) return null;
+        .catch(_ => []);
 
     let grid: Record<string, AvailabilityRecord[]> = res.reduce((prev, cur) => {
         let room = resolveRoomById(cur.itemId.toString());
-        if (!room)
-            return;
+        if (!room) return;
         if (!prev[room.name])
             prev[room.name] = [];
-        prev[room.name].push(cur);
+
+        let patched: AvailabilityRecord = {
+            start: cur.start,
+            end: cur.end,
+            itemId: cur.itemId,
+            checksum: cur.checksum,
+            state: cur.className?.includes('unavailable') ? 'unavailable' : 'available'
+        }
+
+        prev[room.name].push(patched);
         return prev;
     }, {});
 
