@@ -12,19 +12,13 @@ Use npm to install Bluestudy.
 npm install @ilefa/bluestudy
 ```
 
-Since Bluestudy is currently hosted on GitHub packages, you will need to make a ``.npmrc`` file in the root of your project, and insert the following:
-
-```env
-@ilefa:registry=https://npm.pkg.github.com
-```
-
 ## Usage
 
 ```ts
-import { Floor, getAvailability, resolveRoomById } from '@ilefa/bluestudy';
+import { Floor, getAvailability, getRoomById, getRoomByName } from '@ilefa/bluestudy';
 
-// Fetch availability for all rooms on January 15th
-let meals = await getAvailability([1, 15]);
+// Fetch availability for all rooms for today
+let meals = await getAvailability();
 
 {
   '1128': [
@@ -46,21 +40,21 @@ let meals = await getAvailability([1, 15]);
   ...
 }
 
-// Fetch availability of a specific room on January 15th
-let b149b = await getAvailability([1, 15], '12444');
+// Fetch availability of a B149B on January 15th
+let b149b = await getAvailability(getRoomByName('B149B'), [1, 15]);
 
 {
   "B149B": [
     {
-      "start": "2023-01-15 12:00:00",
-      "end": "2023-01-15 15:00:00",
+      "start": "2024-01-15 12:00:00",
+      "end": "2024-01-15 15:00:00",
       "itemId": 12453,
       "checksum": "c11d5428d3ee31aa9d99de346e3ddf1c",
       "state": "available"
     },
     {
-      "start": "2023-01-15 15:00:00",
-      "end": "2023-01-15 17:00:00",
+      "start": "2024-01-15 15:00:00",
+      "end": "2024-01-15 17:00:00",
       "itemId": 12453,
       "checksum": "9bc32cf0c6662f6606e4249c41030929",
       "state": "unavailable"
@@ -69,7 +63,7 @@ let b149b = await getAvailability([1, 15], '12444');
 }
 
 // Get a room by it's ID
-const b149b = resolveRoomById('12444');
+const b149b = getRoomById('12444');
 
 {
     "name": "B149B",

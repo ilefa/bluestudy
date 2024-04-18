@@ -8,11 +8,11 @@ export enum Floor {
 }
 
 export type Room = {
-    readonly name: string;
-    readonly id: string;
-    readonly floor: Floor;
-    readonly capacity: number;
-    readonly features: string[];
+    name: string;
+    id: string;
+    floor: Floor;
+    capacity: number;
+    features: string[];
 }
 
 export type AvailabilityResponse = {
@@ -25,6 +25,8 @@ export type AvailabilityResponse = {
 
 export type AvailabilityRecord = Omit<AvailabilityResponse, 'className'> & {
     state: 'available' | 'unavailable';
+    room: string;
+    roomId: string;
 }
 
 export const Rooms: Room[] = [
@@ -312,21 +314,29 @@ export const floorSorter = (a: Room, b: Room) => {
     return a.floor - b.floor;
 }
 
-export const resolveRoomById = (id: string) => Rooms.find(({ id: roomId }) => roomId === id);
+export const getRoomById = (id: string) => Rooms.find(({ id: roomId }) => roomId === id);
+
+export const getRoomByName = (name: string) => Rooms.find(room => room.name === name);
+
+export const getRoomsOnFloor = (floor: Floor) => Rooms.filter(room => room.floor === floor);
 
 /**
  * Attempts to retrieve availability data
  * for the UConn Library study spaces.
  * 
+ * If `roomId` is not provided, the function will
+ * return availability data for all rooms.
+ * 
+ * @param roomId [optional] the target room to receive availability data for
  * @param date [optional] the target date to receive availability data for
  */
-export const getAvailability = async (date?: MonthDayPair, roomId?: string) => {
+export const getAvailability = async (roomId?: string, date?: MonthDayPair): Promise<AvailabilityRecord[]> => {
     if (!Rooms.find(({ id }) => id === roomId))
         return null;    
 
     let { start, end } = getDateBoundary(date);
     let payload = {
-        lid: 820, gid: 1425, eid: roomId ?? -1,
+        lid: 820, gid: 1425, eid: roomId,
         seat: 0, seatId: 0, zone: 0,
         accessible: 0, powered: 0,
         pageIndex: 0, pageSize: 18,
@@ -346,31 +356,26 @@ export const getAvailability = async (date?: MonthDayPair, roomId?: string) => {
         .then(data => data.slots)
         .catch(_ => null);
 
-    let grid: Record<string, AvailabilityRecord[]> = res.reduce((prev, cur) => {
-        let room = resolveRoomById(cur.itemId.toString());
+    let grid: AvailabilityRecord[] = res.map(ent => {
+        let room = getRoomById(ent.itemId.toString());
         if (!room) return;
-        if (!prev[room.name])
-            prev[room.name] = [];
 
         let patched: AvailabilityRecord = {
-            start: cur.start,
-            end: cur.end,
-            itemId: cur.itemId,
-            checksum: cur.checksum,
-            state: cur.className?.includes('unavailable') ? 'unavailable' : 'available'
+            start: ent.start,
+            end: ent.end,
+            itemId: ent.itemId,
+            checksum: ent.checksum,
+            room: room.name,
+            roomId: room.id,
+            state: (!ent.className || ent.className.includes('s-lc-eq-avail'))
+                ? 'available'
+                : 'unavailable'
         }
 
-        prev[room.name].push(patched);
-        return prev;
-    }, {});
+        return patched;
+    });
 
-    if (roomId) {
-        let room = resolveRoomById(roomId);
-        return Object
-            .keys(grid)
-            .filter(key => key === room.name)
-            .map(key => ({ [key]: grid[key] }));
-    }
+    if (roomId) return grid.filter(room => room.roomId === roomId);
 
     return grid;
 }
