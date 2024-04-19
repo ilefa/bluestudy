@@ -1,0 +1,596 @@
+[
+    {
+        "id": 12371,
+        "name": "B141A",
+        "floor": "B",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs. Note: this room has no door.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/B141A.png"
+    },
+    {
+        "id": 12440,
+        "name": "B141B",
+        "floor": "B",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, and a small whiteboard. Note: this room has no door.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/B141B.png"
+    },
+    {
+        "id": 12441,
+        "name": "B144A",
+        "floor": "B",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, and a large whiteboard.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/B144A.png"
+    },
+    {
+        "id": 12442,
+        "name": "B144B",
+        "floor": "B",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, and a large whiteboard on wheels.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/B144B.png"
+    },
+    {
+        "id": 12443,
+        "name": "B149A",
+        "floor": "B",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, and a large whiteboard.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/B149A.png"
+    },
+    {
+        "id": 12444,
+        "name": "B149B",
+        "floor": "B",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, and a small whiteboard on wheels.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/B149B.png"
+    },
+    {
+        "id": 12445,
+        "name": "1103A",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 6 chairs, TV with VGA and HDMI inputs, and whiteboard walls.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1103A.png"
+    },
+    {
+        "id": 12447,
+        "name": "1103B",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 6 chairs, TV with VGA and HDMI inputs, and whiteboard walls.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1103B.png"
+    },
+    {
+        "id": 12448,
+        "name": "1104A",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 5 chairs, TV with VGA and HDMI inputs.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1104A.png"
+    },
+    {
+        "id": 12449,
+        "name": "1104B",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 5 chairs, TV with VGA and HDMI inputs.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1104B.png"
+    },
+    {
+        "id": 12450,
+        "name": "1104C",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 5 chairs, TV with VGA and HDMI inputs, Whiteboard, Window.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1104C.png"
+    },
+    {
+        "id": 12451,
+        "name": "1104D",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 5 chairs, TV with VGA and HDMI inputs, Whiteboard.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1104D.png"
+    },
+    {
+        "id": 12453,
+        "name": "1128",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 5 chairs, TV with VGA and HDMI inputs, Whiteboard.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1128.png"
+    },
+    {
+        "id": 12454,
+        "name": "1105A",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 5 chairs, TV with VGA and HDMI inputs.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1105A.png"
+    },
+    {
+        "id": 12455,
+        "name": "1105B",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 5 chairs, TV with VGA and HDMI inputs.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1105B.png"
+    },
+    {
+        "id": 12456,
+        "name": "1104E",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 5 chairs, TV with VGA and HDMI inputs, Whiteboard.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1104E.png"
+    },
+    {
+        "id": 12457,
+        "name": "1104F",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 5 chairs, TV with VGA and HDMI inputs, Whiteboard, Window.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1104F.png"
+    },
+    {
+        "id": 12458,
+        "name": "1106A",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 5 chairs, TV with VGA and HDMI inputs, Whiteboard, Window.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1106A.png"
+    },
+    {
+        "id": 12459,
+        "name": "1106B",
+        "floor": "ONE",
+        "capacity": 5,
+        "roomType": "group",
+        "description": "Table with 5 chairs, TV with VGA and HDMI inputs, Whiteboard, Window.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/1106B.png"
+    },
+    {
+        "id": 12460,
+        "name": "2100",
+        "floor": "TWO",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, Whiteboard, Windows.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/2100.png"
+    },
+    {
+        "id": 12461,
+        "name": "2149",
+        "floor": "TWO",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, Whiteboard, Windows.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/2149.png"
+    },
+    {
+        "id": 12462,
+        "name": "2177",
+        "floor": "TWO",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, Whiteboard, Windows.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/2177.png"
+    },
+    {
+        "id": 12463,
+        "name": "2200",
+        "floor": "TWO",
+        "capacity": 12,
+        "roomType": "group",
+        "description": "Table with 12 chairs, Whiteboard.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/2200.png"
+    },
+    {
+        "id": 12465,
+        "name": "3166A",
+        "floor": "THREE",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, TV with VGA and HDMI inputs, Whiteboard.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/3166A.png"
+    },
+    {
+        "id": 12466,
+        "name": "3166B",
+        "floor": "THREE",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, TV with VGA and HDMI inputs, Whiteboard.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/3166B.png"
+    },
+    {
+        "id": 12467,
+        "name": "3182",
+        "floor": "THREE",
+        "capacity": 12,
+        "roomType": "group",
+        "description": "Table with 12 chairs, Whiteboard.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/3182.png"
+    },
+    {
+        "id": 12468,
+        "name": "4100",
+        "floor": "FOUR",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, Whiteboard.Note: this floor is for quiet study.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/4100.png"
+    },
+    {
+        "id": 12469,
+        "name": "4129",
+        "floor": "FOUR",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, Whiteboard.Note: this floor is for quiet study.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/4129.png"
+    },
+    {
+        "id": 12470,
+        "name": "4134A",
+        "floor": "FOUR",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, Whiteboard.Note: this floor is for quiet study.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/4134A.png"
+    },
+    {
+        "id": 12471,
+        "name": "4134B",
+        "floor": "FOUR",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, 2 large whiteboards, and windows. Note: this floor is for quiet study.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/4134B.png"
+    },
+    {
+        "id": 12472,
+        "name": "4177",
+        "floor": "FOUR",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, Whiteboard.Note: this floor is for quiet study.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/4177.png"
+    },
+    {
+        "id": 12473,
+        "name": "4182A",
+        "floor": "FOUR",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, Whiteboard.Note: this floor is for quiet study.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/4182A.png"
+    },
+    {
+        "id": 12474,
+        "name": "4182B",
+        "floor": "FOUR",
+        "capacity": 6,
+        "roomType": "group",
+        "description": "Table with 6 chairs, Whiteboard.Note: this floor is for quiet study.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/4182B.png"
+    },
+    {
+        "id": 12475,
+        "name": "4200",
+        "floor": "FOUR",
+        "capacity": 12,
+        "roomType": "group",
+        "description": "Table with 12 chairs, Whiteboard.Note: this floor is for quiet study.",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/4200.png"
+    },
+    {
+        "id": 137770,
+        "name": "Individual Study Room 3117",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3117.jpg"
+    },
+    {
+        "id": 137771,
+        "name": "Individual Study Room 3118",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3118.jpg"
+    },
+    {
+        "id": 137772,
+        "name": "Individual Study Room 3119",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3119.jpg"
+    },
+    {
+        "id": 137773,
+        "name": "Individual Study Room 3120",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3120.jpg"
+    },
+    {
+        "id": 137774,
+        "name": "Individual Study Room 3123",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3123.jpg"
+    },
+    {
+        "id": 137775,
+        "name": "Individual Study Room 3124",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3124.jpg"
+    },
+    {
+        "id": 137776,
+        "name": "Individual Study Room 3125",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3125.jpg"
+    },
+    {
+        "id": 137777,
+        "name": "Individual Study Room 3126",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3126.jpg"
+    },
+    {
+        "id": 137778,
+        "name": "Individual Study Room 3127",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3127.jpg"
+    },
+    {
+        "id": 137780,
+        "name": "Individual Study Room 3128",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3128.jpg"
+    },
+    {
+        "id": 137781,
+        "name": "Individual Study Room 3129",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3129.jpg"
+    },
+    {
+        "id": 137782,
+        "name": "Individual Study Room 3130",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3130.jpg"
+    },
+    {
+        "id": 137783,
+        "name": "Individual Study Room 3131",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room has a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3131.jpg"
+    },
+    {
+        "id": 137784,
+        "name": "Individual Study Room 3132",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room has a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3132.jpg"
+    },
+    {
+        "id": 137785,
+        "name": "Individual Study Room 3133",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room has a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3133.jpg"
+    },
+    {
+        "id": 137786,
+        "name": "Individual Study Room 3134",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room has a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3134.jpg"
+    },
+    {
+        "id": 137787,
+        "name": "Individual Study Room 3157",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Close to Stacks (should be quiet)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3157.jpg"
+    },
+    {
+        "id": 137788,
+        "name": "Individual Study Room 3158",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Close to Stacks (should be quiet)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3158.jpg"
+    },
+    {
+        "id": 137789,
+        "name": "Individual Study Room 3159",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Close to Stacks (should be quiet)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3159.jpg"
+    },
+    {
+        "id": 137790,
+        "name": "Individual Study Room 3160",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Close to Stacks (should be quiet)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3160.jpg"
+    },
+    {
+        "id": 137791,
+        "name": "Individual Study Room 3162",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3162.jpg"
+    },
+    {
+        "id": 137792,
+        "name": "Individual Study Room 3163",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3163.jpg"
+    },
+    {
+        "id": 137793,
+        "name": "Individual Study Room 3164",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3164.jpg"
+    },
+    {
+        "id": 137794,
+        "name": "Individual Study Room 3165",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Study tables close by (could be noisy)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3165.jpg"
+    },
+    {
+        "id": 137795,
+        "name": "Individual Study Room 3167",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room has a window. Maximum occupancy is 2 people. Close to Stacks (should be quiet)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3167.jpg"
+    },
+    {
+        "id": 137796,
+        "name": "Individual Study Room 3168",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room has a window. Maximum occupancy is 2 people. Close to Stacks (should be quiet)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3167.jpg"
+    },
+    {
+        "id": 137797,
+        "name": "Individual Study Room 3169",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room has a window. Maximum occupancy is 2 people. Close to Stacks (should be quiet)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3169.jpg"
+    },
+    {
+        "id": 137798,
+        "name": "Individual Study Room 3170",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room has a window. Maximum occupancy is 2 people. Close to Stacks (should be quiet)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3170.jpg"
+    },
+    {
+        "id": 137799,
+        "name": "Individual Study Room 3171",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Close to Stacks (should be quiet)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3171.jpg"
+    },
+    {
+        "id": 137800,
+        "name": "Individual Study Room 3172",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Close to Stacks (should be quiet)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3172.jpg"
+    },
+    {
+        "id": 137801,
+        "name": "Individual Study Room 3173",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Close to Stacks (should be quiet)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3173.jpg"
+    },
+    {
+        "id": 137802,
+        "name": "Individual Study Room 3174",
+        "floor": "THREE",
+        "capacity": 2,
+        "roomType": "individual",
+        "description": "This room does not have a window. Maximum occupancy is 2 people. Close to Stacks (should be quiet)",
+        "image": "https://libapps.s3.amazonaws.com/accounts/238319/images/pdc3174.jpg"
+    }
+]
