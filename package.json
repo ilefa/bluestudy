@@ -1,6 +1,6 @@
 {
     "name": "@ilefa/bluestudy",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Internal API to fetch study room availability",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
